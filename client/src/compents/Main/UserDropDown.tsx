@@ -16,7 +16,7 @@ export default function UserDropDown() {
         <div className="flex items-center mb-4 pb-3 border-bottom">
           {currentUser!.profileImg ? (
             <img
-              src={`http://localhost:5050${currentUser!.profileImg}`}
+              src={`http://localhost:${currentUser!.profileImg}`}
               className="profile-img-sm mr-3"
             />
           ) : (

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePostContext } from "../../contexts/PostContext";
 import { useUserContext } from "../../contexts/UsersCotext";
+import { BASE_URL } from "../../Api/Config";
 
 export default function AddPost() {
   const { currentUser } = useUserContext();
@@ -18,7 +19,7 @@ export default function AddPost() {
       setPostContent(editedPost.text);
       setImg(null); // clear any previously selected new image
       if (editedPost.img) {
-        setPreview(`http://localhost:5050${editedPost.img}`);
+        setPreview(`${BASE_URL}${editedPost.img}`);
         setKeepOldImage(true);
       } else {
         setPreview(null);
@@ -88,7 +89,7 @@ export default function AddPost() {
       <div className="flex flex-row items-start">
         {currentUser?.profileImg ? (
           <img
-            src={`http://localhost:5050${currentUser.profileImg}`}
+            src={`${BASE_URL}${currentUser.profileImg}`}
             alt="Profile"
             className="profile-img-sm mr-3 mt-1"
           />

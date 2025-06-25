@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import type { User } from "../../types/User";
 import RemoveModal from "../Modals/RemoveModal";
 import { useCommentContext } from "../../contexts/CommentContex";
+import { BASE_URL } from "../../Api/Config";
 
 interface CommentItemProps {
   children: Comment;
@@ -34,7 +35,7 @@ export default function CommentItem({ children }: CommentItemProps) {
             {user?.profileImg ? (
               <img
                 className="profile-img-xsm mr-3 mt-2 pointer"
-                src={`http://localhost:5050${user?.profileImg}`}
+                src={`${BASE_URL}${user?.profileImg}`}
                 onClick={() => navigate(`/profile/${user?._id}`)}
                 alt="Profile"
               />

@@ -53,7 +53,7 @@ export default function Profile() {
           {user?.profileImg ? (
             <img
               className="profile-img-lg pointer"
-              src={`http://localhost:5050${user?.profileImg}`}
+              src={`${BASE_URL}${user?.profileImg}`}
               alt="Profile"
               onClick={() => setShowImgModal(true)}
             />

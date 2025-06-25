@@ -1,5 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { BASE_URL } from "../../Api/Config";
 import { useCommentContext } from "../../contexts/CommentContex";
 import { useLikeContext } from "../../contexts/LikeContext";
 import { useUserContext } from "../../contexts/UsersCotext";
@@ -107,7 +108,7 @@ export default function PostItem({ children }: PostItemProps) {
         <div className="flex flex-row flex-1 flex-start items-start">
           {user?.profileImg ? (
             <img
-              src={`http://localhost:5050${user.profileImg}`}
+              src={`${BASE_URL}${user.profileImg}`}
               alt={user.name}
               className="profile-img-sm mr-3 pointer"
               onClick={() => navigate(`/profile/${post.userId}`)}
@@ -139,7 +140,7 @@ export default function PostItem({ children }: PostItemProps) {
               {post.img && (
                 <div className="mt-4">
                   <img
-                    src={`http://localhost:5050${post.img}`}
+                    src={`${BASE_URL}${post.img}`}
                     alt={post.text || "Post image"}
                     className="w-100 border-radius-medium"
                     onClick={() => setShowImgModal(true)}

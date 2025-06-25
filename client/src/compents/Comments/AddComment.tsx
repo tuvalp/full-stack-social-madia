@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCommentContext } from "../../contexts/CommentContex";
 import { useUserContext } from "../../contexts/UsersCotext";
+import { BASE_URL } from "../../Api/Config";
 
 interface CommentItemProps {
   postId: string;
@@ -33,7 +34,7 @@ export default function AddComment({ postId, userId }: CommentItemProps) {
       {currentUser?.profileImg ? (
         <img
           className="profile-img-xsm mr-3 mt-2"
-          src={`http://localhost:5050${currentUser?.profileImg}`}
+          src={`${BASE_URL}${currentUser?.profileImg}`}
           alt="Profile"
         />
       ) : (
