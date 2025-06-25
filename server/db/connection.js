@@ -1,7 +1,13 @@
+// db/connection.js
 import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
-const uri =
-  "mongodb+srv://tuvalpeled:tp4388@server.kyz40tm.mongodb.net/?retryWrites=true&w=majority&appName=Server";
+dotenv.config();
+
+const uri = process.env.MONGO_URI;
+if (!uri) {
+  throw new Error("❌ MONGO_URI is not defined in .env");
+}
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -15,14 +21,14 @@ let db;
 async function connectToMongo() {
   try {
     await client.connect();
-    console.log("✅ Connected to MongoDB");
     db = client.db("social");
+    console.log("✅ Connected to MongoDB");
   } catch (e) {
     console.error("❌ Failed to connect to MongoDB:", e);
-    process.exit(1); // optional: crash on connection failure
+    process.exit(1);
   }
 }
 
-await connectToMongo(); // works only in ESM
+await connectToMongo();
 
 export default () => db;
