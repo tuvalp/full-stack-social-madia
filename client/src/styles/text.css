@@ -1,0 +1,55 @@
+.h1 { font-size: 32px; }
+.h2 { font-size: 24px; }
+.h3 { font-size: 20px; }
+.h4 { font-size: 16px; }
+.h5 { font-size: 14px; }
+.h6 { font-size: 12px; }
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.title-xl {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.text-sm { font-size: 12px; }
+.text-md { font-size: 14px; }
+.text-lg { font-size: 16px; }
+.text-xl { font-size: 18px; }
+.text-xxl { font-size: 20px; }
+.text-xxxl { font-size: 24px; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.text-italic { font-style: italic; }
+.text-bold { font-weight: bold; }
+.text-semibold { font-weight: 600; }
+
+.text-white { color: var(--color-white); }
+.text-black { color: var(--color-black); }
+.text-gray-100 { color: var(--color-gray-100); }
+.text-gray-200 { color: var(--color-gray-200); }
+.text-gray-300 { color: var(--color-gray-300); }
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-success { color: var(--success); }
+.text-info { color: var(--info); }
+.text-warning { color: var(--warning); }
+.text-danger { color: var(--danger); }
+.text-light { color: var(--light); }
+.text-dark { color: var(--dark); }
+
+.text-box {
+    white-space: pre-line; /* honors \n */
+    word-break: break-word; /* breaks long words */
+    overflow-wrap: break-word;
+    max-height: 200px; /* optional if you want to clamp */
+    overflow-y: auto;  /* optional if text is long */
+  }
+  

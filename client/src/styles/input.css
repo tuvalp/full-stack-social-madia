@@ -1,0 +1,49 @@
+.input {
+  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-gray-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 9px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  gap: 4px;
+}
+
+.input input,
+.input textarea,
+.input select,
+.input option,
+.input input[type="password"],
+.input input[type="email"],
+.input input[type="file"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.input textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+
+.input input:focus,
+.input textarea:focus,
+.input select:focus {
+  outline: none;
+  background-color: none;
+}
+
+.input input:active {
+  outline: none;
+  background-color: none;
+} 
+.input input::placeholder,
+.input textarea::placeholder {
+  color: var(--color-gray-500);
+}
