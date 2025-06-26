@@ -4,6 +4,7 @@ import PostList from "../Posts/PostList";
 import { usePostContext } from "../../contexts/PostContext";
 import { useEffect, useRef, useState } from "react";
 import type { User } from "../../types/User";
+import { BASE_URL } from "../../Api/Config";
 import ImgModal from "../Modals/ImgModal";
 
 export default function Profile() {
