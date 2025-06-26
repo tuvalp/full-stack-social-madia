@@ -1,1 +1,1 @@
-export const BASE_URL = "https://social-madia-server.onrender.com"; 
+export const BASE_URL = "https://full-stack-social-madia.onrender.com"; 
