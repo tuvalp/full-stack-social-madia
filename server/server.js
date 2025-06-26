@@ -25,6 +25,8 @@ app.use("/likes", likes);
 app.use("/activitys", activitys);
 app.use("/upload", uploadRouter);
 
+app.get('/', (_req, res) => res.send('API is alive'));
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
