@@ -168,3 +168,11 @@
 .scrollable-x {
     overflow-x: scroll;
 }
+
+
+@media (min-width: 640px) {
+ .w-50 {
+    width: 80%;
+ }
+
+}
