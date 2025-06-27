@@ -77,7 +77,7 @@ export default function AddPost() {
   };
 
   return (
-    <div className="w-50 bg-white m-auto mt-4 shadow p-4 flex flex-col border-radius-medium">
+    <div className="w-50 md-w-80 bg-white m-auto mt-4 shadow p-4 flex flex-col border-radius-medium">
       <input
         type="file"
         accept="image/*"
