@@ -170,8 +170,8 @@
 }
 
 
-@media (min-width: 640px) {
- .w-50 {
+@media (min-width: 768px) { 
+    .w-50 {
     width: 80%;
  }
 
