@@ -9,7 +9,8 @@ interface CommentItemProps {
 }
 
 export default function AddComment({ postId, userId }: CommentItemProps) {
-  const { addComment, setRefreshKey, editedComment, updateComment } = useCommentContext();
+  const { addComment, setRefreshKey, editedComment, updateComment } =
+    useCommentContext();
   const [text, setText] = useState("");
   const { currentUser } = useUserContext();
 
@@ -49,12 +50,14 @@ export default function AddComment({ postId, userId }: CommentItemProps) {
           placeholder="What's on your mind?"
         />
       </div>
-      <button
-        className="btn btn-icon btn-icon-sm btn-primary ml-2 mt-1"
-        onClick={handleAddComment}
-      >
-        <i className="fa fa-arrow-right" />
-      </button>
+      {text.length > 0 && (
+        <button
+          className="btn btn-icon btn-icon-sm btn-primary ml-2 mt-1"
+          onClick={handleAddComment}
+        >
+          <i className="fa fa-arrow-right" />
+        </button>
+      )}
     </div>
   );
 }
